@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<div>
+
+
+
+
+
+		<table class="show_users">
+			<tr>
+				<th>Name</th>
+				<td><%= @user.name %></td>
+			</tr>
+			<tr>
+				<th>Age</th>
+				<td><%= @user.age %></td>
+			</tr>
+			<tr>
+				<th>Sex</th>
+				<td><%= @user.sex %></td>
+			</tr>
+			<tr>
+				<th>Email</th>
+				<td><%= @user.email %></td>
+			</tr>
+		</table>
+
+
+</div>
+
+<br />
+<br />
+<%= link_to 'Edit Your Profile', edit_user_path(@user) %> 
+
