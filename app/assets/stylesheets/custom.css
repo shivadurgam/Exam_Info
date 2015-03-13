@@ -136,6 +136,18 @@ header ul{
         font-weight: bold;
         
     }
+    .site_maintenance{
+        margin-top: 50px;
+        margin-right: 100px;
+        float: right;
+        color: green;
+        background-color: white;
+        width: 10%;
+        border: 1px solid green;
+        padding: 5px;
+        border-radius: 8px;
+
+    }
 
 
 
@@ -172,6 +184,7 @@ html {
 }
 body {
   margin: 0;
+
 
 }
 article,

@@ -5,6 +5,30 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+#require 'open-uri'
+#doc = Nokogiri::HTML(open("http://www.thehindu.com/news/"))
+#Marshal.dump doc # this should not be used
+#puts 'test'
+#doc.css('.wikitable')[0].css("tr")[2,14].each do |row|
+#	columns = row.css("td")
+
+#	puts columns[4].text()
+	#Govgen.create(name: columns[1].text(), started: columns[3].text(), ended: columns[4].text())
+
+#end
+
+#doc.css('.headlines').css("a").each do |row|
+	#puts row.css('href').text()
+	#puts columns[4].text()
+	#User.create(name: 'Shiva', age: 31, sex: 'Male', email: 'shiva@gmail.com', password: 'Shiva', password_confirmation: 'Shiva', admin: true)
+	#Govgen.create(name: columns[1].text(), started: columns[3].text(), ended: columns[4].text())
+#end
+
+
+
+
+
+
 user1 = User.create(name: 'Shiva', age: 31, sex: 'Male', email: 'shiva@gmail.com', password: 'Shiva', password_confirmation: 'Shiva', admin: true)
 user2 = User.create(name: 'Shivak', age: 31, sex: 'Male', email: 'shivak@gmail.com', password: 'Shiva', password_confirmation: 'Shiva', admin: false)
 user3 = User.create(name: 'Shivakd', age: 31, sex: 'Male', email: 'shivakd@gmail.com', password: 'Shiva', password_confirmation: 'Shiva', admin: false)
@@ -38,4 +62,5 @@ user29 = User.create(name: 'Shivak', age: 31, sex: 'Male', email: '12shivak@gmai
 user30 = User.create(name: 'Shivakd', age: 31, sex: 'Male', email: '13shivakd@gmail.com', password: 'Shiva', password_confirmation: 'Shiva', admin: false)
 user31 = User.create(name: 'Kd Shiva', age: 31, sex: 'Male', email: '14kdshiva@gmail.com', password: 'Shiva', password_confirmation: 'Shiva', admin: false)
 user32 = User.create(name: 'D Shiva', age: 31, sex: 'Male', email: '15dshiva@gmail.com', password: 'Shiva', password_confirmation: 'Shiva', admin: false)
+
 

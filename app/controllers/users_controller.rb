@@ -70,6 +70,9 @@ class UsersController < ApplicationController
 
   end
 
+  def edu_news
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
@@ -78,7 +81,7 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :age, :sex, :email, :password, :password_confirmation)
+      params.require(:user).permit(:name, :age, :sex, :email, :password, :password_confirmation, :admin)
     end
 
     def authenticate
@@ -87,7 +90,7 @@ class UsersController < ApplicationController
 
     def correct_user
       @user = User.find(params[:id])
-      redirect_to root_path, :flash => {:error1 => "You have no access to other's information!!"} unless current_user?(@user)  # current_user? method defined in sessions_helper
+      redirect_to root_path, :flash => {:error1 => "You have no access to this information!!"} unless current_user?(@user)  # current_user? method defined in sessions_helper
     end
 
     def admin_user

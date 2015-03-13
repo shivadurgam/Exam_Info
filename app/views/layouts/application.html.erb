@@ -7,11 +7,13 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body >
 
 
 
 	<%= render 'layouts/header' %>
+
+	<div class="site_maintenance">This site is under maintenance. Inconvenience regretted.</div>
 	<% flash.each do |key, value| %>
 	<div class="flash_<%=key %>">
 		<%= value %>

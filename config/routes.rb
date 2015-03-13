@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   root 'users#index'
 
+ get '/edu_news' => 'users#edu_news', as: :edu_news
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

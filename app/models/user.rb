@@ -25,6 +25,13 @@ class User < ActiveRecord::Base
 	    end  
   	end  
 
+  	def self.delete1
+  		if @user.delete
+  			redirect_to users_path
+  		end
+  	end
+  	
+
 
 
 
