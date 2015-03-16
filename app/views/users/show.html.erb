@@ -21,6 +21,7 @@
 			<strong> Email:</strong> <%= @user.email %> <br /> <br />
 			<strong>URL:</strong> <%= link_to user_path(@user), @user%> <br /> <br />
 			<strong>Edit Your Profile:</strong> <%= link_to 'Here', edit_user_path(@user) %>  <br /> <br />
+			<li><%= link_to 'Password Reset', edit_password_reset_path %></li>
 		</td>
 	</tr>
 

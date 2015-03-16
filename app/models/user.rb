@@ -17,6 +17,10 @@ class User < ActiveRecord::Base
 	validates :password, :confirmation => true
 
 
+	#defines a proto-feed
+	def feed
+    	Micropost.where("user_id = ?", id)
+  	end
 
 	#search in all users - pagination 
 	def self.search(query)  
