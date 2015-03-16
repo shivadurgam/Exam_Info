@@ -19,6 +19,7 @@
       <th><%= sortable "Age" %></th>
       <th><%= sortable "Sex" %></th>
       <th><%= sortable "Email" %></th>
+      <th>Microposts</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -31,12 +32,16 @@
         <td><%= user.age %></td>
         <td><%= user.sex %></td>
         <td><%= user.email %></td>
+        <td><%= user.microposts.count %></td>
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% if signed_in? %>
+          <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% else %>
+          <td>Destroy</td>
+          <% end %>
       </tr>
     <% end %>
-
   </tbody>
    
 </table>

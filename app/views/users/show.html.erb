@@ -1,35 +1,44 @@
+
+
+
+<% provide(:title, 'Profile') %>
 <p id="notice"><%= notice %></p>
 
-<div>
 
 
 
+<div class='table_profile'>
+<table class="profile" summary="Profile Information">
+	<tr>
+		<td class="mail">
+			<h1> 
+			      <%= gravatar_for @user %> 
+			      <%= @user.name %> 
+			</h1>
+		</td>
+		<td class="sidebar round">
+			<strong>Name:</strong> <%= @user.name %> <br /> <br />
+			<strong> Email:</strong> <%= @user.email %> <br /> <br />
+			<strong>URL:</strong> <%= link_to user_path(@user), @user%> <br /> <br />
+			<strong>Edit Your Profile:</strong> <%= link_to 'Here', edit_user_path(@user) %>  <br /> <br />
+		</td>
+	</tr>
 
-
-		<table class="show_users">
-			<tr>
-				<th>Name</th>
-				<td><%= @user.name %></td>
-			</tr>
-			<tr>
-				<th>Age</th>
-				<td><%= @user.age %></td>
-			</tr>
-			<tr>
-				<th>Sex</th>
-				<td><%= @user.sex %></td>
-			</tr>
-			<tr>
-				<th>Email</th>
-				<td><%= @user.email %></td>
-			</tr>
-		</table>
-
-
+<br />
+</table>
 </div>
 
-<br />
-<br />
-<%= link_to 'Edit Your Profile', edit_user_path(@user) %> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+
+<div class="col-md-8">
+    <% if @user.microposts.any? %>
+      <h3>Microposts (<%= @user.microposts.count %>)</h3>
+      <ol class="microposts">
+        <%= render @microposts %>
+      </ol>
+      <%= will_paginate @microposts %>
+    <% end %>
+</div>
+
+
 
 

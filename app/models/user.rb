@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+
+	has_many :microposts, dependent: :destroy
 	attr_accessor :password
 
 	before_save :encrypt_password
@@ -19,7 +21,7 @@ class User < ActiveRecord::Base
 	#search in all users - pagination 
 	def self.search(query)  
 	    if query  
-	      where('name LIKE ?', "%#{query}%")  
+	      where('name LIKE ? OR email LIKE ?', "%#{query}%", "%#{query}%")  
 	    else  
 	      where(nil) 
 	    end  

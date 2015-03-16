@@ -18,6 +18,8 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    @microposts = @user.microposts.paginate(:page => params[:page])
+    #@micropost = @user.microposts.new
   end
 
   # GET /users/new
@@ -82,6 +84,10 @@ class UsersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       params.require(:user).permit(:name, :age, :sex, :email, :password, :password_confirmation, :admin)
+    end
+
+    def micropost_params
+      params.require(:micropost).permit(:content)
     end
 
     def authenticate

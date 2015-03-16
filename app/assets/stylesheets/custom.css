@@ -10,7 +10,7 @@ header {
   background: #f7f7f7;
 
   margin-left: 130px;
-  margin-right: 130px;
+  margin-right: 100px;
   border-radius: 10px;
   height: 40px;
   
@@ -164,6 +164,15 @@ header ul{
 .pretty th .desc {
   background-image: url(/images/down_arrow.gif);
 }
+
+  .table_profile{
+
+
+  }
+
+
+
+
 
 
 

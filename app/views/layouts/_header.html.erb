@@ -1,16 +1,18 @@
 <header>
 <ul>
+	<li><%= link_to 'Home', root_path %></li>
 	<li><%= link_to 'About Us', users_path %></li>
 	<li><%= link_to 'Study Material', users_path %></li>
 	<li><%= link_to 'Forum', users_path %></li>
-	<li><%= link_to 'Latest News', edu_news_path %></li>
-
+	
 	<% if signed_in? %>
 	<li><%= link_to 'Signout', signout_path %></li>
 	<li><%= link_to 'Profile', current_user %></li>
 
 		<% if current_user.admin? %>
 			<li style="color:red; font-weight:bold"> &nbsp &nbsp You signed in as: Administrator<li>
+		<% else %>
+			<li style="color:red; font-weight:bold">&nbsp &nbsp You signed in as:&nbsp &nbsp<%= current_user.name %></li>
 		<% end %>
 
 	<% else %>

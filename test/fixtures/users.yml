@@ -19,7 +19,7 @@ shiva:
   name: 'Shiva'
   age: 31
   sex: 'Male'
-  email: 'shivakdd@gmail.com'
+  email: 'shiva@gmail.com'
   #encrypted_password: 'Shivak'
   #password: 'Shiva'
   #password_confirmation: 'Shiva'

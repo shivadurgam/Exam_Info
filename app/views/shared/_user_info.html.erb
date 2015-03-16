@@ -1,0 +1,4 @@
+
+<h1 style="background-color:green; color:white; border: 3px solid green; width:20%; border-radius: 10px"><%= current_user.name %></h1>
+<span><%= link_to " View My Profile", current_user %></span> <br />
+<span><%= pluralize(current_user.microposts.count, "Micropost") %></span><br /> <br /><hr />
