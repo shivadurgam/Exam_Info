@@ -10,10 +10,10 @@ module SessionsHelper
 	end
 
 	def current_user=(user)
-		@current_user = user   # set method - it assigns the signed in user to @current_user
+		@current_user = user   # setter method - it assigns the signed in user to @current_user
 	end
 
-	def current_user         # get method ;  the instance variable @current_user shall be made persistent to use across various pages
+	def current_user         # getter method ;  the instance variable @current_user shall be made persistent to use across various pages
 		@current_user ||= user_from_remember_token        # this is same as @current_user = @current_user || user_from_remember_token
 	end													  # for the first time - as @current_user is nil, so it assigns u_f_r_token to the variable @c_u and hits the data base; next time onwards it takes @c_user as it is not nil (which has the value of u_f_r_t which was returned for the first time) avoiding hitting the data base
 

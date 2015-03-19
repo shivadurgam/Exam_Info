@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get    'help'    => 'static_pages#help'
   get    'about'   => 'static_pages#about'
   get    'contact' => 'static_pages#contact'
-  get    'signup'  => 'users#new'
+  get    'signup'  => 'users#new',            :as => :signup
   get    'signin'  => "sessions#new",         :as => :signin
   get    'signout' => 'sessions#destroy',     :as => :signout
   resources :users

@@ -1,4 +1,6 @@
 
-<h1 style="background-color:green; color:white; border: 3px solid green; width:20%; border-radius: 10px"><%= current_user.name %></h1>
-<span><%= link_to " View My Profile", current_user %></span> <br />
-<span><%= pluralize(current_user.microposts.count, "Micropost") %></span><br /> <br /><hr />
+
+<span><h1><%= link_to current_user.name , current_user %> </h1> 
+<%= image_tag current_user.profile_pic.url if current_user.profile_pic? %>
+</span><br />
+<span><%= pluralize(current_user.microposts.count, "Micropost") %></span>

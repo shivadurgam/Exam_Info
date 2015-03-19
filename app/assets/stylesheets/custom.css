@@ -16,6 +16,8 @@ header {
   
 }
 
+
+
 header ul{
     margin: 0;
     padding: 0;
@@ -119,15 +121,16 @@ header ul{
     }
 
     .flash_success {
-        padding-right: 15px;
-        padding-left: 15px;
+        padding: 5px;
         margin-left: 130px;
         margin-top: 50px;
-        color: green;
-        background-color: white;
-        width: 25%;
-        border: 1px solid green;
-        border-radius: 8px;
+        color: black;
+        background-color: #DAEACA;
+        height:30px;
+        width: 50%;
+        
+        
+      
     }
 
     .flash_error {
@@ -171,7 +174,15 @@ header ul{
   }
 
 
-
+  .user_info {
+    background-color:white;
+    color:#4D4D94;
+    width:60%; 
+    border: 2px solid #4D4D94; 
+    border-radius: 10px; 
+    padding:5px; 
+    text-align:center
+  }
 
 
 

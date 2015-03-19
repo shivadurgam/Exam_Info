@@ -7,7 +7,7 @@ before_action :correct_user,   only: :destroy
     @micropost = current_user.microposts.build(micropost_params)
     if @micropost.save
       flash[:success] = "Micropost created!"
-      redirect_to root_url
+      redirect_to static_home_path
     else
     	@feed_items = []
       render 'static_pages/home'
@@ -23,7 +23,7 @@ before_action :correct_user,   only: :destroy
   private
 
     def micropost_params
-      params.require(:micropost).permit(:content)
+      params.require(:micropost).permit(:content, :picture)
     end
 
     def correct_user

@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
 	attr_accessor :password
 
 	before_save :encrypt_password
+	mount_uploader :profile_pic, PictureUploader
+
 
 	validates_presence_of :name, :age, :sex, :email, :password, :message => ": cant be blank"
 	validates_length_of :name, :email, :password, :in => 2..80
@@ -30,16 +32,6 @@ class User < ActiveRecord::Base
 	      where(nil) 
 	    end  
   	end  
-
-  	def self.delete1
-  		if @user.delete
-  			redirect_to users_path
-  		end
-  	end
-  	
-
-
-
 
 	def has_password?(submitted_password)
 		encrypted_password == encrypt(submitted_password)
