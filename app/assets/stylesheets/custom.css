@@ -8,7 +8,7 @@
 
 header {
   background: #f7f7f7;
-
+  margin-top: 10px;
   margin-left: 130px;
   margin-right: 100px;
   border-radius: 10px;
@@ -149,6 +149,37 @@ header ul{
         border: 1px solid green;
         padding: 5px;
         border-radius: 8px;
+
+    }
+
+    .user-status{
+      float:right;
+      margin-right: 5px;
+      margin-top: 10px;
+      color:#5B677D;
+      background-color:white ;
+      padding: 3px;
+      width: 70px;
+      text-align: center;
+      font-family: Phosphate;
+      border: 2px solid #5B677D;
+
+
+    }
+
+    .btn-post {
+
+        color: white;
+        background-color: #428bca;
+        height: 5%;
+        width: 85%;
+        padding: 5px;
+        border-radius: 5px;
+
+    }
+
+    .feed-box{
+      background-color: #f7f7f7;
 
     }
 

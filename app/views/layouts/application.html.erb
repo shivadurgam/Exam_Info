@@ -9,7 +9,14 @@
 </head>
 <body >
 
-
+	<% if signed_in? %>
+	<div class="user-status">
+	 <h5>You are : <%= current_user.name %></h5>
+	</div>
+		<% if current_user.admin? %>
+			<li style="color:red; font-weight:bold"> &nbsp &nbsp Administrator<li>
+		<% end %>
+	<% end %>
 
 	<%= render 'layouts/header' %>
 

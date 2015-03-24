@@ -9,7 +9,7 @@ class PasswordResetsController < ApplicationController
   def update
   	@user = User.find(params[:id])
   	if @user.update(user_params)
-  		redirect_to user_path, notice: 'User was successfully updated.'
+  		redirect_to user_path, :flash => {:success => "User was successfully updated."}
   	end
   end
 

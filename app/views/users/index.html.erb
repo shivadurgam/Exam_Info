@@ -1,6 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Users</h1>
+<h3 align="left">About Dr.Anoohya:</h3> </br><p> Dr.Anoohya has a Masters Degree in Audiology and Speech Language Pathology.  </br>
+She has been into the service since 2012 </p><br />
+
+<p>To fix an appointment with Dr.Anoohya, Please <%= link_to 'Click here', new_user_path %> </p> <br />
+
+<hr />
+
+
+
+<h3>List of Clients</h3>
 
 <%= form_tag users_path, :method => 'get' do %>  
   <p>  
@@ -19,8 +28,7 @@
       <th><%= sortable "Age" %></th>
       <th><%= sortable "Sex" %></th>
       <th><%= sortable "Email" %></th>
-      <th>Microposts</th>
-      <th colspan="3"></th>
+      <th>Feedback</th>
     </tr>
   </thead>
  
@@ -33,13 +41,6 @@
         <td><%= user.sex %></td>
         <td><%= user.email %></td>
         <td><%= user.microposts.count %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-          <% if signed_in? %>
-          <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          <% else %>
-          <td>Destroy</td>
-          <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -49,4 +50,3 @@
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
